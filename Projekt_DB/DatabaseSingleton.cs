@@ -41,7 +41,6 @@ namespace Projekt_DB
 
         private static string ReadSetting(string key)
         {
-            //nutno doinstalovat, VS nabídne doinstalaci samo
             var appSettings = ConfigurationManager.AppSettings;
             string result = appSettings[key] ?? "Not Found";
             return result;

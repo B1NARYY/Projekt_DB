@@ -6,6 +6,8 @@ namespace Projekt_DB
     {
         static void Main(string[] args)
         {
+            var connection = DatabaseSingleton.GetInstance();
+            
 
         }
     }
