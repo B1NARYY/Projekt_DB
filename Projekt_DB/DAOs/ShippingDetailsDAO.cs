@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_DB.DAOs
 {
-    internal class ShippingDetailsDAO
+    public class ShippingDetailsDAO
     {
     }
 }

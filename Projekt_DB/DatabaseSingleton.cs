@@ -30,7 +30,7 @@ namespace Projekt_DB
             }
             return conn;
         }
-
+        
         public static void CloseConnection()
         {
             if (conn != null)
@@ -39,7 +39,7 @@ namespace Projekt_DB
                 conn.Dispose();
             }
         }
-
+        
         private static string ReadSetting(string key)
         {
             var appSettings = ConfigurationManager.AppSettings;

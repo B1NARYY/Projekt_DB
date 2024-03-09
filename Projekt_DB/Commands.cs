@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projekt_DB
+﻿namespace Projekt_DB
 {
     public class Commands
     {
@@ -33,16 +27,13 @@ namespace Projekt_DB
             AddCommand("6) Add a new customer");
             AddCommand("7) Add a new order");
             AddCommand("8) Add a new product");
-            AddCommand("9) Add an order to a customer");
-            AddCommand("10) Add an item to an order");
-            AddCommand("11) Remove an order from a customer");
-            AddCommand("12) Remove an item from an order");
-            AddCommand("13) Update a customer's details");
-            AddCommand("14) Update shipping details");
-            AddCommand("15) Delete a customer");
-            AddCommand("16) Delete an order");
-            AddCommand("17) Delete a product");
-            AddCommand("18) Exit");
+            AddCommand("9) Remove an item from an order");
+            AddCommand("10) Update a customer's details");
+            AddCommand("11) Update shipping details");
+            AddCommand("12) Delete a customer");
+            AddCommand("13) Delete an order");
+            AddCommand("14) Delete a product");
+            AddCommand("15) Exit");
 
             filled = true;
 
@@ -55,6 +46,7 @@ namespace Projekt_DB
         {
             return commands[index];
         }
+
 
     }
 }

@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Projekt_DB
+﻿namespace Projekt_DB
 {
     public class UI
     {
         public void Start()
         {
             Commands commands = new Commands();
+            CommandMethods commandMethods = new CommandMethods();
+            commandMethods.FillCommandsInList();
             Console.WriteLine("Welcome to the database application!");
             do
             {
@@ -23,29 +19,28 @@ namespace Projekt_DB
                 switch (input)
                 {
                     case "1":
-                        Console.WriteLine("Selected command: " + commands.getCommand(0));
-
+                        commandMethods.ListCostumers();
                         break;
                     case "2":
-                        Console.WriteLine("Selected command: " + commands.getCommand(1));
+                        commandMethods.ListOrders();
                         break;
                     case "3":
-                        Console.WriteLine("Selected command: " + commands.getCommand(2));
+                        commandMethods.ListProducts();
                         break;
                     case "4":
-                        Console.WriteLine("Selected command: " + commands.getCommand(3));
+                        commandMethods.ListOrdersByCustomer();
                         break;
                     case "5":
-                        Console.WriteLine("Selected command: " + commands.getCommand(4));
+                        commandMethods.ListItemsInOrder();
                         break;
                     case "6":
-                        Console.WriteLine("Selected command: " + commands.getCommand(5));
+                        commandMethods.AddCustomer();
                         break;
                     case "7":
-                        Console.WriteLine("Selected command: " + commands.getCommand(6));
+                        commandMethods.AddOrder();
                         break;
                     case "8":
-                        Console.WriteLine("Selected command: " + commands.getCommand(7));
+                        commandMethods.AddProduct();
                         break;
                     case "9":
                         Console.WriteLine("Selected command: " + commands.getCommand(8));
@@ -66,16 +61,7 @@ namespace Projekt_DB
                         Console.WriteLine("Selected command: " + commands.getCommand(13));
                         break;
                     case "15":
-                        Console.WriteLine("Selected command: " + commands.getCommand(14));
-                        break;
-                    case "16":
-                        Console.WriteLine("Selected command: " + commands.getCommand(15));
-                        break;
-                    case "17":
-                        Console.WriteLine("Selected command: " + commands.getCommand(16));
-                        break;
-                    case "18":
-                        Console.WriteLine("Selected command: " + commands.getCommand(17));
+                        commandMethods.Exit();
                         break;
                     default:
                         Console.WriteLine("Unknown command");
