@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projekt_DB
+namespace Projekt_DB.DAOs
 {
-    internal class IBaseClass
+    internal class OrderItemDAO
     {
     }
 }

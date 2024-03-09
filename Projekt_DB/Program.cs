@@ -1,13 +1,13 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Projekt_DB.DAOs;
+using System.Data.SqlClient;
 
 namespace Projekt_DB
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            var connection = DatabaseSingleton.GetInstance();
-            
+
 
         }
     }

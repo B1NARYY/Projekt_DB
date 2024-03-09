@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_DB
 {
+
     public class DatabaseSingleton
     {
         private static SqlConnection conn = null;
