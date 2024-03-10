@@ -11,6 +11,7 @@ namespace Projekt_DB.DAOs
 {
     public class CustomerDAO
     {
+        //Method to get all customers from the database
         public static List<Customer> GetCustomers()
         {
             List<Customer> customers = new List<Customer>();
@@ -38,6 +39,8 @@ namespace Projekt_DB.DAOs
 
             return customers;
         }
+        
+        //Method to add a customer to the database
         public void AddCustomer(Customer customer)
         {
             using (SqlConnection conn = DatabaseSingleton.GetInstance())
@@ -52,6 +55,8 @@ namespace Projekt_DB.DAOs
             }
             Console.WriteLine("Customer added successfully");
         }
+       
+        //Method to update a customer in the database
         public void UpdateCustomerInfo(Customer customer)
         {
             using (SqlConnection conn = DatabaseSingleton.GetInstance())

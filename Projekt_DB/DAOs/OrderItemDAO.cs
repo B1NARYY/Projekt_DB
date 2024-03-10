@@ -10,6 +10,7 @@ namespace Projekt_DB.DAOs
 {
     public class OrderItemDAO
     {
+        //Method to get all order items
         public static List<OrderItem> GetItemsInOrder(int orderId)
         {
             List<OrderItem> items = new List<OrderItem>();
@@ -38,6 +39,7 @@ namespace Projekt_DB.DAOs
 
             return items;
         }
+        //Method to add an order item
         public void AddOrderItem(OrderItem item)
         {
             using (SqlConnection conn = DatabaseSingleton.GetInstance())
@@ -52,6 +54,7 @@ namespace Projekt_DB.DAOs
             }
             Console.WriteLine("Order item added successfully");
         }
+        //Method to remove an order item
         public void RemoveOrderItem(int orderItemId)
         {
             using (SqlConnection conn = DatabaseSingleton.GetInstance())

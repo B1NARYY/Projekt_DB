@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Projekt_DB
 {
-
+    // Singleton class for database connection
     public class DatabaseSingleton
     {
         private static SqlConnection conn = null;

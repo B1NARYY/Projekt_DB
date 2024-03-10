@@ -5,6 +5,7 @@ namespace Projekt_DB.DAOs
     public class ShippingDetailsDAO
     {
 
+        // Get shipping details by order id
         public void UpdateShippingDetails(ShippingDetails shippingDetails)
         {
 

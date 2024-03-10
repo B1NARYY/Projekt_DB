@@ -2,6 +2,7 @@
 {
     public class UI
     {
+        //Method that starts the application
         public void Start()
         {
             Commands commands = new Commands();

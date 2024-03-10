@@ -10,6 +10,7 @@ namespace Projekt_DB.DAOs
 {
     public class ProductDAO
     {
+        //Method to get all products from the database
         public static List<Product> GetProducts()
         {
             List<Product> products = new List<Product>();
@@ -36,6 +37,7 @@ namespace Projekt_DB.DAOs
 
             return products;
         }
+        //Method to add a product to the database
         public void AddProduct(Product product)
         {
             using (SqlConnection conn = DatabaseSingleton.GetInstance())

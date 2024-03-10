@@ -5,6 +5,7 @@
         List<string> commands = new List<string>();
         private bool filled = false;
 
+        // Method to list all commands
         public void ListCommands()
         {
             if (!filled)
@@ -17,6 +18,7 @@
                 Console.WriteLine((i + 1) + ". " + commands[i]);
             }
         }
+        // Method to fill the list with commands
         public void FillCommands()
         {
             AddCommand("1) List all customers");
@@ -36,10 +38,12 @@
             filled = true;
 
         }
+        // Method to add a command to the list
         public void AddCommand(string command)
         {
             commands.Add(command);
         }
+        // Method to get a command from the list
         public string getCommand(int index)
         {
             return commands[index];

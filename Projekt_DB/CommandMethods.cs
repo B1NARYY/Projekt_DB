@@ -11,7 +11,7 @@ namespace Projekt_DB
         {
             commands.FillCommands();
         }
-
+        //Method for listing all customers
         public void ListCostumers()
         {
             Console.WriteLine("Selected command: " + commands.getCommand(0));
@@ -20,6 +20,7 @@ namespace Projekt_DB
                 Console.WriteLine(customer);
             }
         }
+        //Method for listing all orders
         public void ListOrders()
         {
             Console.WriteLine("Selected command: " + commands.getCommand(1));
@@ -28,6 +29,7 @@ namespace Projekt_DB
                 Console.WriteLine(order);
             }
         }
+        //Method for listing all products
         public void ListProducts()
         {
             Console.WriteLine("Selected command: " + commands.getCommand(2));
@@ -36,6 +38,7 @@ namespace Projekt_DB
                 Console.WriteLine(product);
             }
         }
+        //Method for listing all orders by customer
         public void ListOrdersByCustomer()
         {
             Console.WriteLine("Selected command: " + commands.getCommand(3));
@@ -46,6 +49,7 @@ namespace Projekt_DB
                 Console.WriteLine(order);
             }
         }
+        //Method for listing all items in order
         public void ListItemsInOrder()
         {
             Console.WriteLine("Selected command: " + commands.getCommand(4));
@@ -56,6 +60,7 @@ namespace Projekt_DB
                 Console.WriteLine(item);
             }
         }
+        //Method for adding customer
         public void AddCustomer()
         {
             Customer customer = new Customer();
@@ -72,6 +77,7 @@ namespace Projekt_DB
 
             customerDAO.AddCustomer(customer);
         }
+        //Method for adding order
         public void AddOrder()
         {
             Order order = new Order();
@@ -85,6 +91,7 @@ namespace Projekt_DB
 
         }
 
+        //Method for adding product
         public void AddProduct()
         {
             Product product = new Product();
@@ -98,6 +105,7 @@ namespace Projekt_DB
             ProductDAO productDAO = new ProductDAO();
             productDAO.AddProduct(product);
         }
+        //Method for removing order item
         public void RemoveOrderItem()
         {
             Console.WriteLine("Selected command: " + commands.getCommand(8));
@@ -106,6 +114,7 @@ namespace Projekt_DB
             OrderItemDAO orderItemDAO = new OrderItemDAO();
             orderItemDAO.RemoveOrderItem(id);
         }
+        //Method for updating customer info
         public void UpdateCustomerInfo()
         {
             Customer customer = new Customer();
@@ -124,6 +133,7 @@ namespace Projekt_DB
             customerDAO.UpdateCustomerInfo(customer);
         }
 
+        //Method for updating shipping details
         public void UpdateShippingDetails()
         {
             ShippingDetails shippingDetails = new ShippingDetails();
@@ -139,6 +149,7 @@ namespace Projekt_DB
             shippingDetails.DeliveryStatus = Console.ReadLine();
             shippingDetailsDAO.UpdateShippingDetails(shippingDetails);
         }
+        //Method for creating order and customer
 
         public void CreateOrderAndCustomer()
         {
@@ -164,6 +175,7 @@ namespace Projekt_DB
 
         }
 
+        //Method for exiting the program
         public void Exit()
         {
             Console.WriteLine("Selected command: " + commands.getCommand(13));

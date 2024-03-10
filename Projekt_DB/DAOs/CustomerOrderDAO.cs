@@ -10,6 +10,7 @@ namespace Projekt_DB.DAOs
 {
     public class CustomerOrderDAO
     {
+        // Method to create a customer and an order
         public void CreateOrderAndCustomer(Customer customer, Order order)
         {
             using (SqlConnection conn = DatabaseSingleton.GetInstance())

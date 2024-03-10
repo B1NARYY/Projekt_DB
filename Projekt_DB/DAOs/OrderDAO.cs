@@ -6,6 +6,7 @@ namespace Projekt_DB.DAOs
     public class OrderDAO
     {
 
+        //Method to get all orders from the database
         public static List<Order> GetOrders()
         {
             List<Order> orders = new List<Order>();
@@ -32,7 +33,7 @@ namespace Projekt_DB.DAOs
             return orders;
         }
 
-
+        //Method to get all orders from the database by customer id
         public static List<Order> GetOrdersByCustomerId(int customerId)
         {
             List<Order> orders = new List<Order>();
@@ -60,6 +61,7 @@ namespace Projekt_DB.DAOs
 
             return orders;
         }
+        //Method to add an order to the database
         public void AddOrder(Order order)
         {
             using (SqlConnection conn = DatabaseSingleton.GetInstance())

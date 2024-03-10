@@ -7,6 +7,7 @@ namespace Projekt_DB
     {
         static void Main(string[] args)
         {
+            // Starts the program
             UI ui = new UI();
             ui.Start();
         }

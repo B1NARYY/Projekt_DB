@@ -10,6 +10,7 @@ namespace Projekt_DB
 {
     internal class ImportFromCSV
     {
+        // Importing Customers from CSV files
         public void ImportCustomers()
         {
             string path = "yourPath";
@@ -27,6 +28,7 @@ namespace Projekt_DB
                 customerDAO.AddCustomer(customer);
             }
         }
+        // Importing Orders from CSV files
         public void ImportOrders()
         {
             string path = "yourPath";
@@ -42,6 +44,7 @@ namespace Projekt_DB
                 orderDAO.AddOrder(order);
             }
         }
+        // Importing Products from CSV files
         public void ImportProducts()
         {
             string path = "yourPath";
@@ -57,6 +60,7 @@ namespace Projekt_DB
 
             }
         }
+        // Importing OrderItems from CSV files
         public void ImportOrderItems()
         {
             string path = "yourPath";
