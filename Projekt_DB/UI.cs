@@ -43,7 +43,7 @@
                         commandMethods.AddProduct();
                         break;
                     case "9":
-                        Console.WriteLine("Selected command: " + commands.getCommand(8));
+                        commandMethods.RemoveOrderItem();
                         break;
                     case "10":
                         Console.WriteLine("Selected command: " + commands.getCommand(9));

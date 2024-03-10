@@ -38,6 +38,31 @@ namespace Projekt_DB.DAOs
 
             return items;
         }
+        public void AddOrderItem(OrderItem item)
+        {
+            using (SqlConnection conn = DatabaseSingleton.GetInstance())
+            {
+                string query = "INSERT INTO Order_Items (order_id, product_id, quantity, total_price) VALUES (@orderId, @productId, @quantity, @totalPrice)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@orderId", item.OrderId);
+                cmd.Parameters.AddWithValue("@productId", item.ProductId);
+                cmd.Parameters.AddWithValue("@quantity", item.Quantity);
+                cmd.Parameters.AddWithValue("@totalPrice", item.TotalPrice);
+                cmd.ExecuteNonQuery();
+            }
+            Console.WriteLine("Order item added successfully");
+        }
+        public void RemoveOrderItem(int orderItemId)
+        {
+            using (SqlConnection conn = DatabaseSingleton.GetInstance())
+            {
+                string query = "DELETE FROM Order_Items WHERE order_item_id = @orderItemId";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@orderItemId", orderItemId);
+                cmd.ExecuteNonQuery();
+            }
+            Console.WriteLine("Order item removed successfully");
+        }
 
     }
 }

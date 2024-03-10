@@ -103,6 +103,14 @@ namespace Projekt_DB
             ProductDAO productDAO = new ProductDAO();
             productDAO.AddProduct(product);
         }
+        public void RemoveOrderItem()
+        {
+            Console.WriteLine("Selected command: " + commands.getCommand(8));
+            Console.WriteLine("Enter order item id: ");
+            int id = Convert.ToInt32(Console.ReadLine());
+            OrderItemDAO orderItemDAO = new OrderItemDAO();
+            orderItemDAO.RemoveOrderItem(id);
+        }
 
 
 

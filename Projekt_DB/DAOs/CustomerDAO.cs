@@ -52,5 +52,20 @@ namespace Projekt_DB.DAOs
             }
             Console.WriteLine("Customer added successfully");
         }
+        public void UpdateCustomerInfo(Customer customer)
+        {
+            using (SqlConnection conn = DatabaseSingleton.GetInstance())
+            {
+                string query = "UPDATE Customers SET name = @name, email = @email, phone_number = @phoneNumber, address = @address WHERE customer_id = @customerId";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", customer.Name);
+                cmd.Parameters.AddWithValue("@email", customer.Email);
+                cmd.Parameters.AddWithValue("@phoneNumber", customer.PhoneNumber);
+                cmd.Parameters.AddWithValue("@address", customer.Address);
+                cmd.Parameters.AddWithValue("@customerId", customer.CustomerId);
+                cmd.ExecuteNonQuery();
+            }
+            Console.WriteLine("Customer info updated successfully");
+        }
     }
 }
