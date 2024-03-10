@@ -27,7 +27,7 @@ Microsoft SQL server managment studio
 
 ## Konfigurace
 
-V souboru `app.config` můžete upravit následující konfigurační parametry:
+V souboru `App.config` můžete upravit následující konfigurační parametry:
 
 - Nastavení databáze
 
