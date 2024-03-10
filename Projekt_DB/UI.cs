@@ -46,21 +46,15 @@
                         commandMethods.RemoveOrderItem();
                         break;
                     case "10":
-                        Console.WriteLine("Selected command: " + commands.getCommand(9));
+                        commandMethods.UpdateCustomerInfo();
                         break;
                     case "11":
-                        Console.WriteLine("Selected command: " + commands.getCommand(10));
+                        commandMethods.UpdateShippingDetails();
                         break;
                     case "12":
-                        Console.WriteLine("Selected command: " + commands.getCommand(11));
+                        commandMethods.CreateOrderAndCustomer();
                         break;
                     case "13":
-                        Console.WriteLine("Selected command: " + commands.getCommand(12));
-                        break;
-                    case "14":
-                        Console.WriteLine("Selected command: " + commands.getCommand(13));
-                        break;
-                    case "15":
                         commandMethods.Exit();
                         break;
                     default:

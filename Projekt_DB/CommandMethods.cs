@@ -1,17 +1,12 @@
 ﻿using Projekt_DB.DAOs;
 using Projekt_DB.Tables;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Projekt_DB
 {
-    public  class CommandMethods
+    public class CommandMethods
     {
         Commands commands = new Commands();
-        
+
         public void FillCommandsInList()
         {
             commands.FillCommands();
@@ -111,13 +106,63 @@ namespace Projekt_DB
             OrderItemDAO orderItemDAO = new OrderItemDAO();
             orderItemDAO.RemoveOrderItem(id);
         }
+        public void UpdateCustomerInfo()
+        {
+            Customer customer = new Customer();
+            Console.WriteLine("Selected command: " + commands.getCommand(9));
+            Console.WriteLine("Enter customer id: ");
+            customer.CustomerId = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter customer name: ");
+            customer.Name = Console.ReadLine();
+            Console.WriteLine("Enter customer email: ");
+            customer.Email = Console.ReadLine();
+            Console.WriteLine("Eneter customer phone number: ");
+            customer.PhoneNumber = Console.ReadLine();
+            Console.WriteLine("Enter customer address: ");
+            customer.Address = Console.ReadLine();
+            CustomerDAO customerDAO = new CustomerDAO();
+            customerDAO.UpdateCustomerInfo(customer);
+        }
+
+        public void UpdateShippingDetails()
+        {
+            ShippingDetails shippingDetails = new ShippingDetails();
+            Console.WriteLine("Selected command: " + commands.getCommand(10));
+            ShippingDetailsDAO shippingDetailsDAO = new ShippingDetailsDAO();
+            Console.WriteLine("Enter shipping id: ");
+            shippingDetails.ShippingId = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter shipping address: ");
+            shippingDetails.ShippingAddress = Console.ReadLine();
+            Console.WriteLine("Enter shipping method: ");
+            shippingDetails.ShippingMethod = Console.ReadLine();
+            Console.WriteLine("Enter delivery status: ");
+            shippingDetails.DeliveryStatus = Console.ReadLine();
+            shippingDetailsDAO.UpdateShippingDetails(shippingDetails);
+        }
+
+        public void CreateOrderAndCustomer()
+        {
+            Customer customer = new Customer();
+            Order order = new Order();
+
+            Console.WriteLine("Selected command: " + commands.getCommand(11));
+            Console.WriteLine("Enter customer name: ");
+            customer.Name = Console.ReadLine();
+            Console.WriteLine("Enter customer email: ");
+            customer.Email = Console.ReadLine();
+            Console.WriteLine("Eneter customer phone number: ");
+            customer.PhoneNumber = Console.ReadLine();
+            Console.WriteLine("Enter customer address: ");
+            customer.Address = Console.ReadLine();
+            Console.WriteLine("Enter customer id: ");
+            order.CustomerId = Convert.ToInt32(Console.ReadLine());
+            order.OrderDate = DateTime.Now;
+            order.OrderStatus = "New";
+            CustomerOrderDAO customerOrderDAO = new CustomerOrderDAO();
+            customerOrderDAO.CreateOrderAndCustomer(customer, order);
 
 
-
-
-
-
-
+        }
 
         public void Exit()
         {
